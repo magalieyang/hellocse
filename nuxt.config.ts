@@ -23,8 +23,12 @@ export default defineNuxtConfig({
 		plugins: [tailwindcss()],
 		vue: {
 			template: {
-				transformAssetUrls,
+						transformAssetUrls,
 			},
 		},
+	},
+	runtimeConfig: {
+		tmdbApiKey: process.env.TMDB_API_KEY,
+		tmdbReadToken: process.env.TMDB_READ_TOKEN 
 	},
 });
