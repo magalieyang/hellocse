@@ -28,7 +28,7 @@ const items = ref<string[]>([]);
 const router = useRouter();
 const selectedMovie = ref(null);
 
-const { data, fetchMoviesByQuery } = useTmdbMoviesList();
+const { movies, fetchMoviesByQuery } = useTmdbMoviesList();
 
 const searchMovie = async (query: string) => {
     if (!query) {
@@ -38,7 +38,7 @@ const searchMovie = async (query: string) => {
     }
 
     await fetchMoviesByQuery(query);
-    items.value = data.value.map((movie) =>{ return{title: movie.title, value: movie.id} });
+    items.value = movies.value.map((movie) =>{ return{title: movie.title, value: movie.id} });
     loading.value = false;
 
 }

@@ -3,9 +3,10 @@ import type { MovieCardData, RawMoviesData} from '~/types/movies';
 import { formatMoviesData } from '@/utils/formatData';
 
 export const useTmdbMoviesList = () => {
-  const data = ref<MovieCardData[]>([]);
+  const movies = ref<MovieCardData[]>([]);
   const loading = ref(false);
   const errorOnFetch = ref<string | null>(null);
+  const currentPage = ref(0);
 
 const fetchMovies = async (page: number = 1) =>{
   loading.value = true;
@@ -17,7 +18,8 @@ const fetchMovies = async (page: number = 1) =>{
     if(!response.results || response.results.length === 0){
       errorOnFetch.value = 'Aucun film trouvé.';
     }else{
-      data.value = formatMoviesData(response);
+      movies.value = [...movies.value, ...formatMoviesData(response)];
+        currentPage.value = page;
     }
   }catch (error: unknown) {
       errorOnFetch.value = error instanceof Error ? error.message : 'Une erreur est survenue. Veuillez réessayer.';
@@ -33,7 +35,7 @@ const fetchMoviesByQuery = async (query: string) => {
     const response = await $fetch<RawMoviesData>('/api/moviesListByQuery/moviesListByQuery', {
       params: { query }
     });
-    data.value = formatMoviesData(response);
+    movies.value = formatMoviesData(response);
   }catch (error: unknown) {
     errorOnFetch.value = error instanceof Error ? error.message : 'Une erreur est survenue. Veuillez réessayer.';
   }finally {
@@ -42,5 +44,5 @@ const fetchMoviesByQuery = async (query: string) => {
 }
 
 
-  return { data, loading, errorOnFetch, fetchMovies, fetchMoviesByQuery };
+  return { movies, currentPage, loading, errorOnFetch, fetchMovies, fetchMoviesByQuery };
 }
