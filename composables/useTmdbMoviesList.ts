@@ -27,7 +27,20 @@ const fetchMovies = async (page: number = 1) =>{
 
 }
 
+const fetchMoviesByQuery = async (query: string) => {
+  loading.value = true;
+  try{
+    const response = await $fetch<RawMoviesData>('/api/moviesListByQuery/moviesListByQuery', {
+      params: { query }
+    });
+    data.value = formatMoviesData(response);
+  }catch (error: unknown) {
+    errorOnFetch.value = error instanceof Error ? error.message : 'Une erreur est survenue. Veuillez réessayer.';
+  }finally {
+    loading.value = false;
+  }
+}
 
 
-  return { data, loading, errorOnFetch, fetchMovies };
+  return { data, loading, errorOnFetch, fetchMovies, fetchMoviesByQuery };
 }

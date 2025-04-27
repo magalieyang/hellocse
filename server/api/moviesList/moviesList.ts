@@ -13,6 +13,5 @@ export default defineEventHandler(async () => {
       )
    const data = await response.json();
 
-   console.log('data::moviesList', data);
       return data;
   });
