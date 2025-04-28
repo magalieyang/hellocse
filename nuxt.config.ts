@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@nuxt/eslint',
+     'dayjs-nuxt',
 		(_options, nuxt) => {
 			nuxt.hooks.hook('vite:extendConfig', (config) => {
 				// @ts-expect-error expect error
@@ -18,6 +19,12 @@ export default defineNuxtConfig({
 			});
 		},
 	],
+  dayjs: {
+    locales: ['en', 'fr'],
+    plugins: ['relativeTime', 'utc', 'timezone'],
+    defaultLocale: 'en',
+    defaultTimezone: 'Europe/Paris',
+  },
 	css: ['@/assets/css/main.css'],
 	vite: {
 		plugins: [tailwindcss()],
