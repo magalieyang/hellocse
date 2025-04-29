@@ -1,5 +1,6 @@
 import {ref} from 'vue';
-import type { MovieData, RawMovieData, RawMovieCreditsData } from '~/types/movies'; 
+import type { MovieData } from '~/types/movies';
+import type { RawMovieData, RawMovieCreditsData } from '~/types/moviesApi';
 import {  formatMovieData } from '@/utils/formatData';
 
 export const useTmdbSingleMovie = () => {

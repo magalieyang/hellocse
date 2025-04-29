@@ -1,4 +1,6 @@
-import type { MovieCardData, MovieData, RawMoviesResultsData, RawMoviesData, RawMovieData, MovieGenresData, RawMovieCreditsData } from '~/types/movies'
+import type { MovieCardData, MovieData } from '~/types/movies'
+import type {  RawMoviesResultsData, RawMoviesData, RawMovieData, RawMovieGenresData, RawMovieCreditsData } from '~/types/moviesApi'
+
 import { useDayjs } from '#dayjs'
 
 const dayjs = useDayjs()
@@ -9,7 +11,8 @@ export function formatMoviesData(rawData: RawMoviesData): MovieCardData[] {
     return {
       id: movie.id,
       title: movie.title,
-      releaseDate: dayjs(movie.release_date).format('DD/MM/YYYY'),
+      originalTitle: movie.original_title,
+      releaseDate: dayjs(movie.release_date).format('MM/DD/YYYY'),
       description: movie.overview || '',
       img: movie.poster_path ? tmdbImgUrl + movie.poster_path : '',
     }
@@ -18,16 +21,16 @@ export function formatMoviesData(rawData: RawMoviesData): MovieCardData[] {
 }
 
 export function formatMovieData(rawData: RawMovieData & RawMovieCreditsData): MovieData {
-
   return{
     id: rawData.id,
     title: rawData.title,
+    originalTitle: rawData.original_title,
     releaseDate: dayjs(rawData.release_date).format('YYYY'),
     img: rawData.poster_path ? tmdbImgUrl + rawData.poster_path : '',
     description: rawData.overview || '',
     rating: rawData.vote_average||0,
     voteCount: rawData.vote_count || 0,
-    genres: rawData.genres?.map((genre: MovieGenresData) => genre.name) || [],
+    genres: rawData.genres?.map((genre: RawMovieGenresData) => genre.name) || [],
     director: rawData.crew?.find((member) => member.job === 'Director')?.name || '',
     cast: rawData.cast?.slice(0,9).map((actor) => ({
         id: actor.id,
