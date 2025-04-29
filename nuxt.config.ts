@@ -11,7 +11,8 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@nuxt/eslint',
-     'dayjs-nuxt',
+    'dayjs-nuxt',
+    '@nuxt/test-utils/module',
 		(_options, nuxt) => {
 			nuxt.hooks.hook('vite:extendConfig', (config) => {
 				// @ts-expect-error expect error
