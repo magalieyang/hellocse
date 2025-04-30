@@ -8,7 +8,7 @@ export interface RawMoviesData{
 export interface RawMoviesErrorData{
     status_message: string,
     status_code: number,
-    sucess: boolean
+    success: boolean
 }
 
 export interface RawMoviesResultsData{

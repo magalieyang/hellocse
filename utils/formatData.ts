@@ -5,15 +5,11 @@ import { useDayjs } from '#dayjs'
 
 const dayjs = useDayjs()
 const tmdbImgUrl = 'https://image.tmdb.org/t/p/w500';
-export function formatMoviesData(rawData: RawMoviesData): MovieCardData[] {
-
+export function formatMoviesData(rawData: RawMoviesData): MovieCardData[] {  
   return rawData.results.map((movie: RawMoviesResultsData) => {
     return {
       id: movie.id,
       title: movie.title,
-      originalTitle: movie.original_title,
-      releaseDate: dayjs(movie.release_date).format('MM/DD/YYYY'),
-      description: movie.overview || '',
       img: movie.poster_path ? tmdbImgUrl + movie.poster_path : '',
     }
   })
