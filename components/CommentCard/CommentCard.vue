@@ -1,13 +1,22 @@
 <template>
-    <div class="comment-card__wrapper">
-        <div class="comment-card__header">
-            <p class="comment-card-author">{{ data.username }}</p>
-            <p class="comment-card-rating">{{ data.rating }}/10</p>
-        </div>
-        <p class="comment-card__content">
-            {{ data.text }}
-        </p>
-    </div>
+    <v-card class="comment-card__container">
+        <v-card-item>
+            <div class="flex flex-row justify-between">
+                <div class="flex flex-row align-center gap-1">
+                    <v-avatar color="white" size="small">
+                        <v-icon color="black" icon="mdi-account-circle-outline" />
+                    </v-avatar>
+                    <v-card-title>
+                        {{ data.username }}
+                    </v-card-title>
+                </div>
+                <v-rating :model-value="data.rating" :length="10" half-increments readonly size="x-small" density="comfortable"/>
+            </div>
+            <v-card-text>
+                {{ data.text }}
+            </v-card-text>
+        </v-card-item >
+    </v-card >
 </template>
 
 <script lang="ts" setup>
