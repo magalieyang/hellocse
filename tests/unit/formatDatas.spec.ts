@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { formatMoviesData, formatMovieData } from '../../utils/formatData';
+import { formatMoviesData, formatMovieData } from '@/utils/formatData';
 import {
 	rawMovieDetailsData,
 	rawMovieCreditsData,
 	expectedMovieData,
 } from '../__mocks__/movieData';
-import { rawMoviesData, expectedMoviesData } from '../__mocks__/moviesData';
+import { rawMoviesData, expectedMoviesData } from '@/tests/__mocks__/moviesData';
 
 describe('formatData.ts', () => {
 	describe('formatMoviesData for list', () => {

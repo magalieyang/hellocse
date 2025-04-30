@@ -1,6 +1,6 @@
 import { ref } from 'vue';
-import type { MovieCardData } from '~/types/movies';
-import type { RawMoviesData, RawMoviesErrorData } from '~/types/moviesApi';
+import type { MovieCardData } from '@/types/movies';
+import type { RawMoviesData, RawMoviesErrorData } from '@/types/moviesApi';
 
 import { formatMoviesData } from '@/utils/formatData';
 

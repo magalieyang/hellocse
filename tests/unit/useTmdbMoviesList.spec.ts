@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { useTmdbMoviesList } from '../../composables/useTmdbMoviesList';
+import { useTmdbMoviesList } from '@/composables/useTmdbMoviesList';
 import {
 	rawMoviesData,
 	rawMoreMoviesData,
@@ -8,7 +8,7 @@ import {
 	expectedMoreMoviesData,
 	expectedMoviesByQueryData,
 	rawMoviesByQueryData,
-} from '../__mocks__/moviesData';
+} from '@/tests/__mocks__/moviesData';
 
 describe('useTmdbMoviesList.ts', () => {
 	it('should initialize with default values', () => {

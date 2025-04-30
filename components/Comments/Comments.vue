@@ -86,8 +86,8 @@
 </template>
 
 <script lang="ts" setup>
-import CommentCard from '~/components/CommentCard/CommentCard.vue';
-import type { CommentData } from '~/types';
+import CommentCard from '@/components/CommentCard/CommentCard.vue';
+import type { CommentData } from '@/types';
 
 import { useVuelidate } from '@vuelidate/core';
 import {

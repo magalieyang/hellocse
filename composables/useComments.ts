@@ -3,7 +3,7 @@ import type {
 	CommentData,
 	CommentFormData,
 	MovieCommentData,
-} from '~/types/comments';
+} from '@/types/comments';
 import { useDayjs } from '#dayjs';
 
 const dayjs = useDayjs();

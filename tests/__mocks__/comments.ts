@@ -2,7 +2,7 @@ import type {
 	CommentData,
 	MovieCommentData,
 	CommentFormData,
-} from '~/types/comments';
+} from '@/types/comments';
 
 export const newComment: CommentFormData = {
 	username: 'John Doe',

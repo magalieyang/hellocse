@@ -1,5 +1,5 @@
-import type { MovieCardData } from '~/types/movies';
-import type { RawMoviesData } from '~/types/moviesApi';
+import type { MovieCardData } from '@/types/movies';
+import type { RawMoviesData } from '@/types/moviesApi';
 
 export const rawMoviesData: RawMoviesData = {
 	page: 1,

@@ -110,8 +110,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useTmdbSingleMovie } from '~/composables/useTmdbSingleMovie';
-import OverviewLoading from '~/components/OverviewLoading/OverviewLoading.vue';
+import { useTmdbSingleMovie } from '@/composables/useTmdbSingleMovie';
+import OverviewLoading from '@/components/OverviewLoading/OverviewLoading.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();

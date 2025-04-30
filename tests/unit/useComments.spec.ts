@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { useComments } from '../../composables/useComments';
+import { useComments } from '@/composables/useComments';
 import {
 	newComment,
 	expectedNewComment,
 	initialComments,
-} from '../__mocks__/comments';
+} from '@/tests/__mocks__/comments';
 
 // Mock dayjs with a fixed date
 vi.mock('#dayjs', () => ({

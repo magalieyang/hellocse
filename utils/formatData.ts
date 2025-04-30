@@ -1,11 +1,11 @@
-import type { MovieCardData, MovieData } from '~/types/movies';
+import type { MovieCardData, MovieData } from '@/types/movies';
 import type {
 	RawMoviesResultsData,
 	RawMoviesData,
 	RawMovieData,
 	RawMovieGenresData,
 	RawMovieCreditsData,
-} from '~/types/moviesApi';
+} from '@/types/moviesApi';
 
 import { useDayjs } from '#dayjs';
 

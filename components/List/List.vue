@@ -41,7 +41,7 @@
 </template>
 <script lang="ts" setup>
 import MovieCard from '@/components/MovieCard/MovieCard.vue';
-import { useTmdbMoviesList } from '~/composables/useTmdbMoviesList';
+import { useTmdbMoviesList } from '@/composables/useTmdbMoviesList';
 
 const { movies, currentPage, errorOnFetch, fetchMovies, loading } =
 	useTmdbMoviesList();

@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { useTmdbSingleMovie } from '../../composables/useTmdbSingleMovie';
+import { useTmdbSingleMovie } from '@/composables/useTmdbSingleMovie';
 import {
 	rawMovieDetailsData,
 	rawMovieCreditsData,
 	expectedMovieData,
-} from '../__mocks__/movieData';
+} from '@/tests/__mocks__/movieData';
 
 describe('useTmdbSingleMovie', () => {
 	let fetchMock: ReturnType<typeof vi.fn>;

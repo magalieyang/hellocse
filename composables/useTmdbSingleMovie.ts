@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import type { MovieData } from '~/types/movies';
+import type { MovieData } from '@/types/movies';
 import type {
 	RawMovieData,
 	RawMovieCreditsData,

@@ -1,5 +1,5 @@
-import type { MovieData } from '~/types/movies';
-import type { RawMovieData, RawMovieCreditsData } from '~/types/moviesApi';
+import type { MovieData } from '@/types/movies';
+import type { RawMovieData, RawMovieCreditsData } from '@/types/moviesApi';
 
 export const rawMovieDetailsData: RawMovieData = {
 	adult: false,
