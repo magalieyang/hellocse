@@ -32,7 +32,9 @@ import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
 const loading = ref<boolean>(false);
-const items = ref<{ title: string; date: string; originalTitle: string; value: number }[]>([]);
+const items = ref<
+	{ title: string; date: string; originalTitle: string; value: number }[]
+>([]);
 const router = useRouter();
 const selectedMovie = ref(null);
 
