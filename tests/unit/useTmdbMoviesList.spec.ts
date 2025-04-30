@@ -32,14 +32,14 @@ describe('useTmdbMoviesList.ts', () => {
 		it('should fetch movies successfully', async () => {
 			fetchMock.mockResolvedValueOnce(rawMoviesData);
 
-			const { fetchMovies, movies, currentPage, errorOnFetch } = useTmdbMoviesList();
+			const { fetchMovies, movies, currentPage, errorOnFetch } =
+				useTmdbMoviesList();
 			await fetchMovies();
 
 			expect(movies.value).toEqual(expectedMoviesData);
 			expect(currentPage.value).toEqual(1);
 			expect(fetchMock).toHaveBeenCalledOnce();
-            expect(errorOnFetch.value).toBe(null);
-
+			expect(errorOnFetch.value).toBe(null);
 		});
 
 		it('should fetch more movies successfully', async () => {
@@ -47,14 +47,15 @@ describe('useTmdbMoviesList.ts', () => {
 				.mockResolvedValueOnce(rawMoviesData)
 				.mockResolvedValueOnce(rawMoreMoviesData);
 
-			const { fetchMovies, movies, currentPage, errorOnFetch } = useTmdbMoviesList();
+			const { fetchMovies, movies, currentPage, errorOnFetch } =
+				useTmdbMoviesList();
 			await fetchMovies();
 			await fetchMovies(currentPage.value + 1);
 
 			expect(movies.value).toEqual(expectedMoreMoviesData);
 			expect(currentPage.value).toEqual(2);
 			expect(fetchMock).toHaveBeenCalledTimes(2);
-            expect(errorOnFetch.value).toBe(null);
+			expect(errorOnFetch.value).toBe(null);
 		});
 
 		it('should display error message when 200 but no results', async () => {
@@ -93,13 +94,13 @@ describe('useTmdbMoviesList.ts', () => {
 		it('should fetch movies successfully', async () => {
 			fetchMock.mockResolvedValueOnce(rawMoviesByQueryData);
 
-			const { fetchMoviesByQuery, movies, errorOnFetch } = useTmdbMoviesList();
+			const { fetchMoviesByQuery, movies, errorOnFetch } =
+				useTmdbMoviesList();
 			await fetchMoviesByQuery('Once up');
 
 			expect(movies.value).toEqual(expectedMoviesByQueryData);
 			expect(fetchMock).toHaveBeenCalledOnce();
-            expect(errorOnFetch.value).toEqual(null);
-
+			expect(errorOnFetch.value).toEqual(null);
 		});
 
 		it('should display error message when 200 but no results', async () => {

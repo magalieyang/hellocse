@@ -1,15 +1,12 @@
 {
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-html"
-    ],
-    "overrides": [
-      {
-        "files": ["**/*.vue"],
-        "customSyntax": "postcss-html"
-      }
-    ],
-    "rules": {
-        "import-notation": "string"
-    }
-  }
+	"extends": ["stylelint-config-standard", "stylelint-config-html"],
+	"overrides": [
+		{
+			"files": ["**/*.vue"],
+			"customSyntax": "postcss-html"
+		}
+	],
+	"rules": {
+		"import-notation": "string"
+	}
+}

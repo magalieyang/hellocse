@@ -60,20 +60,26 @@
 			</v-form>
 
 			<!-- COMMENTS LIST -->
-			<div class="pl-12 border-l border-gray-300 flex flex-col gap-4 movie-comments__wrapper">
-                <template v-if="sortedComments?.length">
-                    <CommentCard
-                        v-for="(comment, index) in sortedComments"
-                        :key="index"
-                        :data="comment"
-                    />
-                </template>
-                <template v-else>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-1 text-gray-800">There are no comments at this time</h3>
-                        <p class="text-gray-600">Be the first to share your opinion!</p>
-                    </div>
-                </template>
+			<div
+				class="pl-12 border-l border-gray-300 flex flex-col gap-4 movie-comments__wrapper"
+			>
+				<template v-if="sortedComments?.length">
+					<CommentCard
+						v-for="(comment, index) in sortedComments"
+						:key="index"
+						:data="comment"
+					/>
+				</template>
+				<template v-else>
+					<div>
+						<h3 class="text-xl font-semibold mb-1 text-gray-800">
+							There are no comments at this time
+						</h3>
+						<p class="text-gray-600">
+							Be the first to share your opinion!
+						</p>
+					</div>
+				</template>
 			</div>
 		</div>
 	</div>
@@ -170,13 +176,13 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.movie-comments{
-    &__form {
-	min-width: 640px;
-    flex: 1;
-    }
-    &__wrapper{
-        max-width: 50%
-    }
+.movie-comments {
+	&__form {
+		min-width: 640px;
+		flex: 1;
+	}
+	&__wrapper {
+		max-width: 50%;
+	}
 }
 </style>

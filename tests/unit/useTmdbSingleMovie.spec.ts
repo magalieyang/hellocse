@@ -46,16 +46,18 @@ describe('useTmdbSingleMovie', () => {
 
 		expect(errorOnFetch.value).toEqual('Async error');
 	});
-    it('should display error message when 200 but no results', async () => {
+	it('should display error message when 200 but no results', async () => {
 		fetchMock.mockResolvedValueOnce({
-            status_code: 6,
-            status_message: 'foo',
-            success: false,
-        });
+			status_code: 6,
+			status_message: 'foo',
+			success: false,
+		});
 
-		const { errorOnFetch, fetchMovieDetails }  = useTmdbSingleMovie();
+		const { errorOnFetch, fetchMovieDetails } = useTmdbSingleMovie();
 		await fetchMovieDetails(1);
 
-		expect(errorOnFetch.value).toEqual('An error occurred. Please try again.');
+		expect(errorOnFetch.value).toEqual(
+			'An error occurred. Please try again.',
+		);
 	});
 });

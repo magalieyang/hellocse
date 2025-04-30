@@ -1,6 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { useComments } from '../../composables/useComments';
-import { newComment, expectedNewComment, initialComments } from '../__mocks__/comments';
+import {
+	newComment,
+	expectedNewComment,
+	initialComments,
+} from '../__mocks__/comments';
 
 // Mock dayjs with a fixed date
 vi.mock('#dayjs', () => ({
@@ -21,11 +25,11 @@ describe('useComments.ts', () => {
 			expect(moviesComments.value).toEqual([]);
 		});
 
-        it('should return an empty array when there are no comments for a movie', () => {
-            const { getMovieComments } = useComments();
-            const comments = getMovieComments(1);
-            expect(comments).toEqual([]);
-        });
+		it('should return an empty array when there are no comments for a movie', () => {
+			const { getMovieComments } = useComments();
+			const comments = getMovieComments(1);
+			expect(comments).toEqual([]);
+		});
 
 		it('should add a comment to a movie', () => {
 			const { moviesComments, addComment } = useComments();
@@ -40,32 +44,35 @@ describe('useComments.ts', () => {
 		});
 	});
 
-    describe('LocalStorage has data', () => {
-        beforeEach(() => {
-            localStorage.setItem('movie-comments', JSON.stringify(initialComments));
-        });
-        it('should initialize with existing comments from localStorage', () => {
-            const { moviesComments } = useComments();
-            expect(moviesComments.value).toEqual(initialComments);
-        });
+	describe('LocalStorage has data', () => {
+		beforeEach(() => {
+			localStorage.setItem(
+				'movie-comments',
+				JSON.stringify(initialComments),
+			);
+		});
+		it('should initialize with existing comments from localStorage', () => {
+			const { moviesComments } = useComments();
+			expect(moviesComments.value).toEqual(initialComments);
+		});
 
-        it('should return existing comments for a movie', () => {
-            const { getMovieComments } = useComments();
-            const comments = getMovieComments(1);
-            expect(comments).toEqual(initialComments[0].comments);
-        });
+		it('should return existing comments for a movie', () => {
+			const { getMovieComments } = useComments();
+			const comments = getMovieComments(1);
+			expect(comments).toEqual(initialComments[0].comments);
+		});
 
-        it('should add a comment to an existing movie', () => {
-            const { moviesComments, addComment } = useComments();
+		it('should add a comment to an existing movie', () => {
+			const { moviesComments, addComment } = useComments();
 
-            addComment(2, newComment);
+			addComment(2, newComment);
 
-            const movie = moviesComments.value.find(
-                (movie) => movie.movieId === 2,
-            );
-            expect(movie).toBeDefined();
-            expect(movie?.comments.length).toBe(2);
-            expect(movie?.comments[1]).toEqual(expectedNewComment);
-        });
-    });
+			const movie = moviesComments.value.find(
+				(movie) => movie.movieId === 2,
+			);
+			expect(movie).toBeDefined();
+			expect(movie?.comments.length).toBe(2);
+			expect(movie?.comments[1]).toEqual(expectedNewComment);
+		});
+	});
 });

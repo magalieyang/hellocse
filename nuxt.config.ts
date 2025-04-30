@@ -11,8 +11,8 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@nuxt/eslint',
-    'dayjs-nuxt',
-    '@nuxt/test-utils/module',
+		'dayjs-nuxt',
+		'@nuxt/test-utils/module',
 		(_options, nuxt) => {
 			nuxt.hooks.hook('vite:extendConfig', (config) => {
 				// @ts-expect-error expect error
@@ -20,23 +20,23 @@ export default defineNuxtConfig({
 			});
 		},
 	],
-  dayjs: {
-    locales: ['en', 'fr'],
-    plugins: ['relativeTime', 'utc', 'timezone'],
-    defaultLocale: 'en',
-    defaultTimezone: 'Europe/Paris',
-  },
+	dayjs: {
+		locales: ['en', 'fr'],
+		plugins: ['relativeTime', 'utc', 'timezone'],
+		defaultLocale: 'en',
+		defaultTimezone: 'Europe/Paris',
+	},
 	css: ['@/assets/css/main.css'],
 	vite: {
 		plugins: [tailwindcss()],
 		vue: {
 			template: {
-						transformAssetUrls,
+				transformAssetUrls,
 			},
 		},
 	},
 	runtimeConfig: {
 		tmdbApiKey: process.env.TMDB_API_KEY,
-		tmdbReadToken: process.env.TMDB_READ_TOKEN 
+		tmdbReadToken: process.env.TMDB_READ_TOKEN,
 	},
 });

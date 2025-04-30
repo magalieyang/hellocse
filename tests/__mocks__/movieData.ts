@@ -1,8 +1,7 @@
 import type { MovieData } from '~/types/movies';
 import type { RawMovieData, RawMovieCreditsData } from '~/types/moviesApi';
 
-
-export const rawMovieDetailsData : RawMovieData = {
+export const rawMovieDetailsData: RawMovieData = {
 	adult: false,
 	backdrop_path: '/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg',
 	belongs_to_collection: null,
@@ -112,7 +111,7 @@ export const rawMovieDetailsData : RawMovieData = {
 	vote_average: 6.3,
 	vote_count: 445,
 };
-export const rawMovieCreditsData : RawMovieCreditsData = {
+export const rawMovieCreditsData: RawMovieCreditsData = {
 	id: 1197306,
 	cast: [
 		{

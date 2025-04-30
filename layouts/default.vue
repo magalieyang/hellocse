@@ -1,16 +1,13 @@
 <template>
 	<div class="default-layout">
-		<header class="header__container bg-sky-600 text-white fixed w-full top-0 z-1">
+		<header
+			class="header__container bg-sky-600 text-white fixed w-full top-0 z-1"
+		>
 			<nav class="header__nav flex gap-4 items-center pa-4">
 				<NuxtLink to="/" class="mx-0">
-					<v-btn
-						density="compact"
-						icon="mdi-home"
-						variant="text"
-						
-					/>
+					<v-btn density="compact" icon="mdi-home" variant="text" />
 				</NuxtLink>
-                <h1 class="text-xl font-bold">What are we watching tonight?</h1>
+				<h1 class="text-xl font-bold">What are we watching tonight?</h1>
 			</nav>
 		</header>
 

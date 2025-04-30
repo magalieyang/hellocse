@@ -70,49 +70,29 @@ export const expectedMoviesData: MovieCardData[] = [
 	{
 		id: 1197306,
 		title: 'A Working Man',
-		originalTitle: 'A Working Man',
-		releaseDate: '03/26/2025',
 		img: 'https://image.tmdb.org/t/p/w500/yBSLptuEaleUfTwE4ktlFcnmLkY.jpg',
-		description:
-			"Levon Cade est un criminel repenti. Aujourd'hui, il travaille dans le bâtiment. Bientôt, la fille de son patron, Jenny, disparaît, il est appelé à réutiliser les compétences qui ont fait de lui une figure légendaire dans le monde des opérations secrètes.",
 	},
 	{
 		id: 950387,
 		title: 'Minecraft, le film',
-		originalTitle: 'A Minecraft Movie',
-		releaseDate: '03/31/2025',
 		img: 'https://image.tmdb.org/t/p/w500/cq9z69AyIXeL2H14bqHE5ukm3M9.jpg',
-		description:
-			"Bienvenue dans l’univers de Minecraft où la créativité est essentielle à la survie ! Quatre outsiders – Garrett, Henry, Natalie et Dawn – sont soudainement projetés à travers un mystérieux portail menant à L'Overworld – un incroyable monde cubique qui prospère grâce à l’imagination. Pour rentrer chez eux, il leur faudra maîtriser ce monde (et le protéger de créatures maléfiques comme les Piglins et les Zombies), tout en s’engageant dans une quête fantastique aux côtés de Steve, expert fabricateur. Cette aventure les invitera à faire preuve d’audace et à développer leurs qualités singulières de créativité. Autant de facultés dont ils auront besoin pour s’épanouir dans le monde réel.",
 	},
 ];
 export const expectedMoreMoviesData: MovieCardData[] = [
 	{
 		id: 1197306,
 		title: 'A Working Man',
-		originalTitle: 'A Working Man',
-		releaseDate: '03/26/2025',
 		img: 'https://image.tmdb.org/t/p/w500/yBSLptuEaleUfTwE4ktlFcnmLkY.jpg',
-		description:
-			"Levon Cade est un criminel repenti. Aujourd'hui, il travaille dans le bâtiment. Bientôt, la fille de son patron, Jenny, disparaît, il est appelé à réutiliser les compétences qui ont fait de lui une figure légendaire dans le monde des opérations secrètes.",
 	},
 	{
 		id: 950387,
 		title: 'Minecraft, le film',
-		originalTitle: 'A Minecraft Movie',
-		releaseDate: '03/31/2025',
 		img: 'https://image.tmdb.org/t/p/w500/cq9z69AyIXeL2H14bqHE5ukm3M9.jpg',
-		description:
-			"Bienvenue dans l’univers de Minecraft où la créativité est essentielle à la survie ! Quatre outsiders – Garrett, Henry, Natalie et Dawn – sont soudainement projetés à travers un mystérieux portail menant à L'Overworld – un incroyable monde cubique qui prospère grâce à l’imagination. Pour rentrer chez eux, il leur faudra maîtriser ce monde (et le protéger de créatures maléfiques comme les Piglins et les Zombies), tout en s’engageant dans une quête fantastique aux côtés de Steve, expert fabricateur. Cette aventure les invitera à faire preuve d’audace et à développer leurs qualités singulières de créativité. Autant de facultés dont ils auront besoin pour s’épanouir dans le monde réel.",
 	},
 	{
 		id: 324544,
 		title: 'In the Lost Lands',
-		originalTitle: 'In the Lost Lands',
-		releaseDate: '02/27/2025',
 		img: 'https://image.tmdb.org/t/p/w500/t6HJH3gXtUqVinyFKWi7Bjh73TM.jpg',
-		description:
-			"Une reine rêve d'obtenir le don de métamorphose. Elle engage la sorcière Gray Alys, une femme aussi redoutée que puissante. Envoyés dans les Terres perdues, Alys et son guide, le vagabond Boyce, doivent déjouer et combattre l'homme et le démon dans une fable qui explore la nature du bien et du mal, de la dette et de l'accomplissement, de l'amour et de la perte.",
 	},
 ];
 export const rawMoviesByQueryData: RawMoviesData = {
@@ -158,22 +138,13 @@ export const rawMoviesByQueryData: RawMoviesData = {
 };
 export const expectedMoviesByQueryData: MovieCardData[] = [
 	{
-		id:261503,
+		id: 261503,
 		title: 'Once Upon a Time in Triad Society 2',
-		originalTitle: '去吧！揸Fit人兵團',
 		img: 'https://image.tmdb.org/t/p/w500/gsk1IqSWY5U4llVs3aQFHEhJcOs.jpg',
-		releaseDate: '09/06/1996',
-		description:
-				'The second spin-off film from the Young and Dangerous series.',
 	},
 	{
-		id:489420,
+		id: 489420,
 		title: 'Once Upon a Time at Christmas',
-		originalTitle: 'Once Upon a Time at Christmas',
 		img: 'https://image.tmdb.org/t/p/w500/txxposTwwVxRfsthYH9NR4xwmgT.jpg',
-		releaseDate: '11/26/2017',
-		description:
-		"In the twelve days leading up to Christmas, the residents of the snowy and isolated town of Woodridge are being murdered in a variety of gruesome ways by a psychotic Santa and Mrs. Claus. While the small-town cops scramble to protect the townsfolk, the killings seem to center around one young woman who may be the final victim on Santa's list. As the slaughter continues and the bodies pile up, it seems that nothing and no one may be able to stop the murderers before they complete their own deadly take on the twelve days of Christmas.",
-
-	}
-]
+	},
+];
