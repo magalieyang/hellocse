@@ -61,7 +61,11 @@
 										class="movie-overview-cast__img"
 										cover
 										height="250"
-									/>
+									>
+									<template #placeholder>
+										<p class="px-2 text-sm text-gray-400">No picture available for display</p>
+									</template>
+									</v-img>
 								<v-card-item :title="actor.name" :subtitle="actor.character" />
 							</v-card>
 						</v-slide-group-item>
@@ -139,5 +143,7 @@ const actorImgSrc = (actor) => {
 </script>
 
 <style lang="scss" scoped>
-
+.page-overview:deep(.v-img__placeholder){
+	align-content: center;
+}
 </style>
