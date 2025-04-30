@@ -1,6 +1,8 @@
 export interface MovieCardData {
 	id: number;
 	title: string;
+	originalTitle: string;
+	date: string;
 	img: string;
 }
 export interface MovieData {

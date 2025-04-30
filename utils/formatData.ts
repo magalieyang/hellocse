@@ -17,6 +17,8 @@ export function formatMoviesData(rawData: RawMoviesData): MovieCardData[] {
 			id: movie.id,
 			title: movie.title,
 			img: movie.poster_path ? tmdbImgUrl + movie.poster_path : '',
+			originalTitle: movie.original_title,
+			date: dayjs(movie.release_date).format('YYYY'),
 		};
 	});
 }

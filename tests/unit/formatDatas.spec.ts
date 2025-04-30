@@ -5,7 +5,10 @@ import {
 	rawMovieCreditsData,
 	expectedMovieData,
 } from '../__mocks__/movieData';
-import { rawMoviesData, expectedMoviesData } from '@/tests/__mocks__/moviesData';
+import {
+	rawMoviesData,
+	expectedMoviesData,
+} from '@/tests/__mocks__/moviesData';
 
 describe('formatData.ts', () => {
 	describe('formatMoviesData for list', () => {

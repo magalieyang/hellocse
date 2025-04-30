@@ -71,11 +71,15 @@ export const expectedMoviesData: MovieCardData[] = [
 		id: 1197306,
 		title: 'A Working Man',
 		img: 'https://image.tmdb.org/t/p/w500/yBSLptuEaleUfTwE4ktlFcnmLkY.jpg',
+		originalTitle: 'A Working Man',
+		date: '2025',
 	},
 	{
 		id: 950387,
 		title: 'Minecraft, le film',
 		img: 'https://image.tmdb.org/t/p/w500/cq9z69AyIXeL2H14bqHE5ukm3M9.jpg',
+		originalTitle: 'A Minecraft Movie',
+		date: '2025',
 	},
 ];
 export const expectedMoreMoviesData: MovieCardData[] = [
@@ -83,16 +87,22 @@ export const expectedMoreMoviesData: MovieCardData[] = [
 		id: 1197306,
 		title: 'A Working Man',
 		img: 'https://image.tmdb.org/t/p/w500/yBSLptuEaleUfTwE4ktlFcnmLkY.jpg',
+		originalTitle: 'A Working Man',
+		date: '2025',
 	},
 	{
 		id: 950387,
 		title: 'Minecraft, le film',
 		img: 'https://image.tmdb.org/t/p/w500/cq9z69AyIXeL2H14bqHE5ukm3M9.jpg',
+		originalTitle: 'A Minecraft Movie',
+		date: '2025',
 	},
 	{
 		id: 324544,
 		title: 'In the Lost Lands',
 		img: 'https://image.tmdb.org/t/p/w500/t6HJH3gXtUqVinyFKWi7Bjh73TM.jpg',
+		originalTitle: 'In the Lost Lands',
+		date: '2025',
 	},
 ];
 export const rawMoviesByQueryData: RawMoviesData = {
@@ -141,10 +151,14 @@ export const expectedMoviesByQueryData: MovieCardData[] = [
 		id: 261503,
 		title: 'Once Upon a Time in Triad Society 2',
 		img: 'https://image.tmdb.org/t/p/w500/gsk1IqSWY5U4llVs3aQFHEhJcOs.jpg',
+		originalTitle: '去吧！揸Fit人兵團',
+		date: '1996',
 	},
 	{
 		id: 489420,
 		title: 'Once Upon a Time at Christmas',
 		img: 'https://image.tmdb.org/t/p/w500/txxposTwwVxRfsthYH9NR4xwmgT.jpg',
+		originalTitle: 'Once Upon a Time at Christmas',
+		date: '2017',
 	},
 ];

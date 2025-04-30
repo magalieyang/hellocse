@@ -14,7 +14,15 @@
 			menu-icon=""
 			@update:model-value="onSelect"
 			@update:search="onChange"
-		/>
+		>
+			<template #item="{ props, item }">
+				<v-list-item v-bind="props">
+					<template #subtitle>
+						{{ item.raw.originalTitle }} ({{ item.raw.date }})
+					</template>
+				</v-list-item>
+			</template>
+		</v-autocomplete>
 	</div>
 </template>
 
@@ -39,7 +47,12 @@ const searchMovie = async (query: string) => {
 
 	await fetchMoviesByQuery(query);
 	items.value = movies.value.map((movie) => {
-		return { title: movie.title, value: movie.id };
+		return {
+			title: movie.title,
+			date: movie.date,
+			originalTitle: movie.originalTitle,
+			value: movie.id,
+		};
 	});
 	loading.value = false;
 };
